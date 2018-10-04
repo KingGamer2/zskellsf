@@ -10,7 +10,7 @@ const queue = new Map();
 const ytdl = require('ytdl-core');
 const fs = require('fs');
 const gif = require("gif-search");
-const prefix = "%"
+const prefix = "$"
 const adminprefix = "-"
 /////////////////////////
 ////////////////////////
@@ -262,15 +262,15 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 	
         ***__أوامر الموسيفة__***
 **
-%play - لتشغيل أغنية برآبط أو بأسم
-%come - حتى تثبت البوت بروم
-%skip - لتجآوز الأغنية الحآلية
-%pause - إيقآف الأغنية مؤقتا
-%resume - لموآصلة الإغنية بعد إيقآفهآ مؤقتا
-%vol - لتغيير درجة الصوت 100 - 0』
-%stop - لإخرآج البوت من الروم
-%np - لمعرفة الأغنية المشغلة حآليا
-%queue - لمعرفة قآئمة التشغيل
+$play - لتشغيل أغنية برآبط أو بأسم
+$come - حتى تثبت البوت بروم
+$skip - لتجآوز الأغنية الحآلية
+$pause - إيقآف الأغنية مؤقتا
+$resume - لموآصلة الإغنية بعد إيقآفهآ مؤقتا
+$vol - لتغيير درجة الصوت 100 - 0』
+$stop - لإخرآج البوت من الروم
+$np - لمعرفة الأغنية المشغلة حآليا
+$queue - لمعرفة قآئمة التشغيل
 **
   
    
@@ -404,7 +404,7 @@ message.channel.send({embed:embed});
 
 
  client.on('message', function(message) {
-	const myID = "332143953677778948";
+	const myID = "373127337178431488";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(adminprefix + "setname")) {
 		        if(message.author.id !== myID) return;
@@ -459,7 +459,7 @@ message.channel.send({embed:embed});
 
   client.on('message',async message => {
     if(message.content.startsWith(adminprefix + "restart")) {
-        if(message.author.id !== "332143953677778948") return message.reply('You aren\'t the bot owner.');
+        if(message.author.id !== "373127337178431488") return message.reply('You aren\'t the bot owner.');
         message.channel.send('**Restarting.**').then(msg => {
             setTimeout(() => {
                msg.edit('**Restarting..**');
